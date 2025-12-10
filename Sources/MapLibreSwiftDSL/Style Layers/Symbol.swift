@@ -9,6 +9,7 @@ import MapLibreSwiftMacros
 @MLNStyleProperty<CGVector>("iconOffset", supportsInterpolation: true)
 // An enum would probably be better?
 @MLNStyleProperty<String>("iconAnchor", supportsInterpolation: false)
+@MLNStyleProperty<Double>("iconScale", supportsInterpolation: true)
 
 @MLNStyleProperty<UIColor>("textColor", supportsInterpolation: true)
 @MLNStyleProperty<Double>("textFontSize", supportsInterpolation: true)
@@ -164,6 +165,7 @@ private struct SymbolStyleLayerInternal: StyleLayer {
         result.textHaloColor = definition.textHaloColor
         result.textHaloWidth = definition.textHaloWidth
         result.textHaloBlur = definition.textHaloBlur
+        result.iconScale = definition.iconScale
 
         result.symbolPlacement = definition.symbolPlacement
         result.symbolSpacing = definition.symbolSpacing
